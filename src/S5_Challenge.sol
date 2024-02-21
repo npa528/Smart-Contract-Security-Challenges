@@ -8,6 +8,7 @@ import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {IERC721Receiver} from "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import {console} from "lib/forge-std/src/console.sol";
 
+// Source: https://github.com/Cyfrin/security-and-auditing-full-course-s23?tab=readme-ov-file
 // Challenge S5: https://sepolia.etherscan.io/address/0xdeb8d8efef7049e280af1d5fe3a380f3be93b648
 
 interface IS5  { 

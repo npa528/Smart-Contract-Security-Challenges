@@ -42,7 +42,8 @@ cast call 0xA674606AEEdfC0138727Cb4fD613aF1b7269Cb8E --rpc-url $SEPOLIA_RPC_URL 
 
 // ----------------------------- Challenge S5 -----------------------------
 
-Source: https://sepolia.etherscan.io/address/0xdeb8d8efef7049e280af1d5fe3a380f3be93b648
+Source: https://github.com/Cyfrin/security-and-auditing-full-course-s23?tab=readme-ov-file
+Challenge S5: https://sepolia.etherscan.io/address/0xdeb8d8efef7049e280af1d5fe3a380f3be93b648
 
 // Deploying S5_Challenge contract on Sepolia passing constructor param address of target Contract (S5)
 WARNING: ADDRESS S5 is changing!!!

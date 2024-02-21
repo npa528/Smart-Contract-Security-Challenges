@@ -3,8 +3,8 @@ pragma solidity ^0.8.0;
 
 import "forge-std/Script.sol";
 import "forge-std/Test.sol";
-import {S5} from "../src/S5.sol";
-import "../src/S5Pool.sol";
+import {S5} from "../src/S5_Challenge/S5.sol";
+import "../src/S5_Challenge/S5Pool.sol";
 import {S5Token} from "../test/mocks/S5Token.sol";
 
 contract S5Script is Script {

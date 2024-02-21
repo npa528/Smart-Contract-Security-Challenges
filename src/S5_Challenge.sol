@@ -8,6 +8,8 @@ import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {IERC721Receiver} from "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import {console} from "lib/forge-std/src/console.sol";
 
+// Challenge S5: https://sepolia.etherscan.io/address/0xdeb8d8efef7049e280af1d5fe3a380f3be93b648
+
 interface IS5  { 
   // contract S5 address in Sepolia: 0xdeB8d8eFeF7049E280Af1d5FE3a380F3BE93B648 // It changes all the time
   function solveChallenge(string memory yourTwitterHandle) external;

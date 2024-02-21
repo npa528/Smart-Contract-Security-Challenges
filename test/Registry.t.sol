@@ -13,6 +13,9 @@ contract RegistryTest is Test {
     Registry registry;
     address alice;
 
+    uint256 public constant MIN_PRICE = 1 ether;
+    uint256 public constant ETHER_10 = 10 ether;
+
     function setUp() public {
         alice = makeAddr("alice");
         
@@ -37,4 +40,21 @@ contract RegistryTest is Test {
     }
 
     /** Code your fuzz test here */
+     /** Almost the same test, but this time fuzzing amountToPay detects the bug (the Registry
+         contract is not giving back the change) */
+    function test_ReturnChange(uint256 amountToPay) public {
+        
+        vm.assume(amountToPay >= 1 ether);
+        vm.deal(alice, amountToPay);
+        vm.startPrank(alice);
+
+        uint256 aliceBalanceBefore = address(alice).balance;
+        registry.register{value: amountToPay}();
+
+        uint256 aliceBalanceAfter = address(alice).balance;
+        
+        assertTrue(registry.isRegistered(alice), "Did not register user");
+        assertEq(address(registry).balance, registry.PRICE(), "Unexpected registry balance");
+        assertEq(aliceBalanceAfter, aliceBalanceBefore - registry.PRICE(), "Unexpected user balance");
+    }
 }

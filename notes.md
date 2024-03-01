@@ -85,3 +85,29 @@ Transaction hash: 0xa3eaf11ac19954a2c6641a929649e87678372a91f20c3de24656eca6136e
 cast send 0xE50863854274FEDc678Be3A7dF4128Fb7c4F2bdF --rpc-url $SEPOLIA_RPC_URL "flashLoan()" --private-key $PRIVATE_KEY
 
 transactionHash: 0x9d842a3669104992b61be3c19c583f5acff8a745d0376cc195697b33bdbe419b
+
+
+// ----------------------------- Challenge S7 -----------------------------
+
+// Source: https://github.com/Cyfrin/security-and-auditing-full-course-s23?tab=readme-ov-file#-section-7-bridges-chains-signatures-intro-to-yulassembly--bridge-boss-audit
+// Challenge S7: https://sepolia.etherscan.io/address/0x33ee14fb8816c92fe401165330bbe29706942183#code
+// contract S7 address in Sepolia: 0x33ee14Fb8816c92fe401165330bbE29706942183
+
+Solution
+Transaction hash: 0x9fdaf9bae5bd44c55fe20f85370efb8a1e34c7705a44d9277c9a547eec78ecd9
+
+I had to check previous transactions of the contract 0x33ee14Fb8816c92fe401165330bbE29706942183, to see how other people solve it.
+There I found v, r, s values and I used also a random nonce and my twitter handle. I don't think there is other way to solve this.
+
+#	  Name	          Type       	Data
+0	  v	              uint8	      27
+1	  r	              bytes32	    0xa46fa4aa7a12d6d321525c965002f0a8e7d9fc5796cb693fc3f6afe07ccf2fb4
+2	  s	              bytes32	    0x2ea5f22aa0bc24d8131350706c6c4902fac21525bfb30500fae965385aea00dc
+3	  nonce	          uint256	    12345
+4	  twitterHandle	  string	    chamdev1
+
+
+
+
+
+
